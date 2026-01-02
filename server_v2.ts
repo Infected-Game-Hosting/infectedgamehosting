@@ -1,27 +1,26 @@
-// ============================================
-// 2. server.ts (Production SSR Server)
-// ============================================
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express from "express";
 import compression from "compression";
 import sirv from "sirv";
+import type { ViteDevServer } from "vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
-const port = process.env.PORT || 3000;
+const port = parseInt(process.env.PORT || (isProduction ? "3000" : "5173"), 10);
 const base = process.env.BASE || "/";
 
-// Create http server
 const app = express();
+app.set("trust proxy", 1);
 
-// Add Vite or respective production middlewares
-let vite: any;
+let vite: ViteDevServer | undefined;
 if (!isProduction) {
   const { createServer } = await import("vite");
   vite = await createServer({
-    server: { middlewareMode: true },
+    server: {
+      middlewareMode: true,
+    },
     appType: "custom",
     base,
   });
@@ -30,40 +29,62 @@ if (!isProduction) {
   app.use(compression());
   app.use(
     base,
-    sirv(path.resolve(__dirname, "dist/client"), { extensions: [] })
+    sirv(path.resolve(__dirname, "dist/client"), {
+      extensions: [],
+      setHeaders: (res, pathname) => {
+        if (pathname.includes("/assets/")) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        }
+      },
+    })
   );
 }
 
-// Serve HTML (SSR) — only for HTML requests
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 app.get(/.*/, async (req, res) => {
   try {
-    // --- 1) Skip non-HTML requests (assets, HMR, images, etc.) ---
     const acceptHeader = req.headers.accept || "";
-    if (!acceptHeader.includes("text/html")) {
-      // Let other middleware (vite/sirv/etc.) handle it, or return 404 for unknown assets
+    const url = req.originalUrl || req.url || "/";
+
+    if (url.includes("?token=")) {
+      return res.status(204).end();
+    }
+
+    if (url.includes(".well-known")) {
       return res.status(404).end();
     }
 
-    // --- 2) Keep a proper path (leave leading slash) ---
-    // If you have a non-root base (e.g. '/app'), strip it, otherwise keep the path as-is
-    let url = req.originalUrl || req.url || "/";
-    if (base !== "/" && url.startsWith(base)) {
-      url = url.slice(base.length) || "/";
+    if (!isProduction && !url.includes("/@")) {
+      console.log(`[HTML] ${url}`);
+    }
+
+    if (
+      acceptHeader &&
+      !acceptHeader.includes("text/html") &&
+      !acceptHeader.includes("*/*")
+    ) {
+      return res.status(404).end();
+    }
+
+    let cleanUrl = url.split("?")[0];
+    if (base !== "/" && cleanUrl.startsWith(base)) {
+      cleanUrl = cleanUrl.slice(base.length) || "/";
     }
 
     let template: string;
     let render: any;
 
-    if (!isProduction) {
-      // Development: load template and render function from Vite
+    if (!isProduction && vite) {
       template = fs.readFileSync(
         path.resolve(__dirname, "index.html"),
         "utf-8"
       );
-      template = await vite.transformIndexHtml(url, template);
+      template = await vite.transformIndexHtml(cleanUrl, template);
       render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
     } else {
-      // Production: use pre-built files
       template = fs.readFileSync(
         path.resolve(__dirname, "dist/client/index.html"),
         "utf-8"
@@ -71,22 +92,23 @@ app.get(/.*/, async (req, res) => {
       render = (await import("./dist/server/entry-server.js")).render;
     }
 
-    // Render the app HTML with helmet context
-    const { html: appHtml, helmet } = await render(url);
+    const { html: appHtml, helmet } = await render(cleanUrl);
 
-    // Inject the app-rendered HTML and helmet tags into template
     const html = template
-      .replace(`<!--app-html-->`, appHtml)
-      .replace(`<!--app-head-->`, helmet);
+      .replace(`<!--app-head-->`, helmet)
+      .replace(`<!--app-html-->`, appHtml);
 
     res.status(200).set({ "Content-Type": "text/html" }).end(html);
   } catch (e: any) {
-    !isProduction && vite?.ssrFixStacktrace(e);
-    console.error(e.stack || e);
-    res.status(500).end(e.stack || String(e));
+    vite?.ssrFixStacktrace(e);
+    console.error("❌ SSR Error:", e);
+    res
+      .status(500)
+      .end(isProduction ? "Internal Server Error" : e.stack || String(e));
   }
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(`📦 Environment: ${isProduction ? "production" : "development"}`);
 });

@@ -29,7 +29,8 @@ if (!isProduction) {
   app.use(compression());
   app.use(
     base,
-    sirv(path.resolve(__dirname, "dist/client"), {
+    sirv(path.resolve(__dirname, "client"), {
+      // Changed from "dist/client"
       extensions: [],
       setHeaders: (res, pathname) => {
         if (pathname.includes("/assets/")) {
@@ -86,10 +87,10 @@ app.get(/.*/, async (req, res) => {
       render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
     } else {
       template = fs.readFileSync(
-        path.resolve(__dirname, "dist/client/index.html"),
+        path.resolve(__dirname, "client/index.html"), // Changed from "dist/client"
         "utf-8"
       );
-      render = (await import("./dist/server/entry-server.js")).render;
+      render = (await import("./dist/server/entry-server.js")).render; // Changed from "dist/server"
     }
 
     const { html: appHtml, helmet } = await render(cleanUrl);
@@ -108,7 +109,15 @@ app.get(/.*/, async (req, res) => {
   }
 });
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
-  console.log(`📦 Environment: ${isProduction ? "production" : "development"}`);
-});
+// Export the Express app for Vercel
+export default app;
+
+// Only listen if not in Vercel environment
+if (!process.env.VERCEL) {
+  app.listen(port, "0.0.0.0", () => {
+    console.log(`🚀 Server running at http://localhost:${port}`);
+    console.log(
+      `📦 Environment: ${isProduction ? "production" : "development"}`
+    );
+  });
+}
