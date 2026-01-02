@@ -1,0 +1,61 @@
+name: Deploy to IONOS VPS
+
+on:
+  push:
+    branches:
+      - main # Change to 'production' or whatever branch you want to auto-deploy
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  deploy:
+    name: Build and Deploy to
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build React App
+        run: npm run build
+        env:
+          CI: false
+          # Use the same environment variables as production
+          VITE_PUBLIC_POSTHOG_KEY: ${{ secrets.VITE_PUBLIC_POSTHOG_KEY }}
+          VITE_PUBLIC_POSTHOG_HOST: ${{ secrets.VITE_PUBLIC_POSTHOG_HOST }}
+
+      - name: 📤 Deploy to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: "dist/*"
+          target: "/home/github-deploy/build"
+          strip_components: 1
+          rm: true
+
+      - name: 🚀 Execute Deployment Script
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd ~
+            ./deploy.sh
+
+      - name: ✅ Deployment Complete
+        run: |
+          echo "🎉 Deployment successful!"
+          echo "🌐 Site: https://infectedgamehosting.com"

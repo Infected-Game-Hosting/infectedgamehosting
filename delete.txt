@@ -1,0 +1,1624 @@
+ <section id="pricing" className="py-32 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[#39ff14] bg-clip-text text-transparent">
+                Choose Your Plan
+              </h2>
+              <p className="text-[#c8cbd0] text-lg mb-4">All plans include NVMe/SSD storage, DDoS protection, and 1Gbit unmetered bandwidth.</p>
+              <p className="text-[#c8cbd0] text-sm">Current stock: Available</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Starter Plan */}
+              <div className="glass-card p-8 text-center group hover:scale-105 transition-transform duration-300">
+                <h3 className="text-2xl font-bold mb-6">Starter</h3>
+                <div className="text-[#c8cbd0] mb-2">4GB RAM / 1 vCPU</div>
+                <div className="text-[#c8cbd0] mb-6">Setup: $3.50 setup fee</div>
+                <div className="text-4xl font-bold text-[#39ff14] mb-6">
+                  <span className="font-bold">$11.00</span><span className="text-lg text-[#c8cbd0]"> / month</span>
+                </div>
+                <p className="text-[#c8cbd0] mb-8 leading-relaxed">Perfect for 1–2 players (unmodded).</p>
+                <a
+                  href="https://billing.infectedgamehosting.com/cart.php?a=add&pid=1"
+                  target="_blank"
+                  rel="noopener"
+                  className="neon-button w-full"
+                >
+                  Order
+                </a>
+              </div>
+
+              {/* Popular Plan */}
+              <div className="glass-card p-8 text-center group hover:scale-105 transition-transform duration-300 relative border-[#39ff14]/50">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black font-bold px-6 py-2 rounded-full text-sm shadow-[0_0_20px_rgba(57,255,20,0.4)]">Popular</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-6 mt-4">Popular</h3>
+                <div className="text-[#c8cbd0] mb-2">12GB RAM / 3 vCPU</div>
+                <div className="text-[#c8cbd0] mb-6">Setup: $3.50 setup fee</div>
+                <div className="text-4xl font-bold text-[#39ff14] mb-6">
+                  <span className="font-bold">$33.00</span><span className="text-lg text-[#c8cbd0]"> / month</span>
+                </div>
+                <p className="text-[#c8cbd0] mb-8 leading-relaxed">Great for 8–10 players (light modding).</p>
+                <a
+                  href="https://billing.infectedgamehosting.com/cart.php?a=add&pid=2"
+                  target="_blank"
+                  rel="noopener"
+                  className="neon-button w-full"
+                >
+                  Order
+                </a>
+              </div>
+
+              {/* High-Tier Plan */}
+              <div className="glass-card p-8 text-center group hover:scale-105 transition-transform duration-300">
+                <h3 className="text-2xl font-bold mb-6">High-Tier</h3>
+                <div className="text-[#c8cbd0] mb-2">20GB RAM / 5 vCPU</div>
+                <div className="text-[#c8cbd0] mb-6">Setup: $3.50 setup fee</div>
+                <div className="text-4xl font-bold text-[#39ff14] mb-6">
+                  <span className="font-bold">$55.00</span><span className="text-lg text-[#c8cbd0]"> / month</span>
+                </div>
+                <p className="text-[#c8cbd0] mb-8 leading-relaxed">Best for 10+ players (moderate modding).</p>
+                <a
+                  href="https://billing.infectedgamehosting.com/cart.php?a=add&pid=3"
+                  target="_blank"
+                  rel="noopener"
+                  className="neon-button w-full"
+                >
+                  Order
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infected Game Hosting — Fast, Reliable Game Servers</title>
+    <meta name="description" content="Low-latency servers with NVMe/SSD, DDoS protection, Discord + WHMCS support." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html> -->
+
+
+// import { defineConfig } from 'vite';
+// import react from '@vitejs/plugin-react';
+
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+//   optimizeDeps: {
+//     exclude: ['lucide-react'],
+//   },
+// });
+
+
+// import React, { useState } from "react";
+
+// const Navbar = () => {
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+//   const smoothScroll = (elementId: string) => {
+//     const element = document.getElementById(elementId);
+//     if (element) {
+//       element.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+//   return (
+//     <header className="fixed top-0 w-full z-50 glass-card border-b border-white/10 backdrop-blur-md bg-[#0b0b0f]/80">
+//       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex justify-between items-center h-16">
+//           {/* Logo */}
+//           <div className="flex items-center">
+//             <img
+//               src="/image.png"
+//               alt="Infected Game Hosting Logo"
+//               className="w-8 h-8 mr-3"
+//             />
+//             <span className="text-xl font-bold text-white">
+//               Infected Game Hosting
+//             </span>
+//           </div>
+
+//           {/* Desktop Nav */}
+//           <div className="hidden lg:flex items-center space-x-8">
+//             <button
+//               onClick={() => smoothScroll("features")}
+//               className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors"
+//             >
+//               Features
+//             </button>
+//             <button
+//               onClick={() => smoothScroll("pricing")}
+//               className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors"
+//             >
+//               Pricing
+//             </button>
+//             <button
+//               onClick={() => smoothScroll("support")}
+//               className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors"
+//             >
+//               Support
+//             </button>
+//           </div>
+
+//           {/* Desktop CTAs */}
+//           <div className="hidden lg:flex items-center space-x-4">
+//             <a
+//               href="https://billing.infectedgamehosting.com/cart.php"
+//               target="_blank"
+//               rel="noopener"
+//               className="neon-button-outline text-sm px-4 py-2"
+//             >
+//               Order Now
+//             </a>
+//             <a
+//               href="https://panel.infectedgamehosting.com/"
+//               target="_blank"
+//               rel="noopener"
+//               className="neon-button text-sm px-4 py-2"
+//             >
+//               Open Panel
+//             </a>
+//           </div>
+
+//           {/* Mobile menu button */}
+//           <div className="lg:hidden">
+//             <button
+//               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//               className="text-[#c8cbd0] hover:text-white p-2"
+//               aria-label="Toggle menu"
+//             >
+//               <svg
+//                 className="w-6 h-6"
+//                 fill="none"
+//                 stroke="currentColor"
+//                 viewBox="0 0 24 24"
+//               >
+//                 {mobileMenuOpen ? (
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     strokeWidth={2}
+//                     d="M6 18L18 6M6 6l12 12"
+//                   />
+//                 ) : (
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     strokeWidth={2}
+//                     d="M4 6h16M4 12h16M4 18h16"
+//                   />
+//                 )}
+//               </svg>
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile menu */}
+//         {mobileMenuOpen && (
+//           <div className="lg:hidden py-4 border-t border-white/10">
+//             <div className="flex flex-col space-y-3">
+//               <button
+//                 onClick={() => {
+//                   smoothScroll("features");
+//                   setMobileMenuOpen(false);
+//                 }}
+//                 className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors text-left"
+//               >
+//                 Features
+//               </button>
+//               <button
+//                 onClick={() => {
+//                   smoothScroll("pricing");
+//                   setMobileMenuOpen(false);
+//                 }}
+//                 className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors text-left"
+//               >
+//                 Pricing
+//               </button>
+//               <button
+//                 onClick={() => {
+//                   smoothScroll("support");
+//                   setMobileMenuOpen(false);
+//                 }}
+//                 className="text-[#c8cbd0] hover:text-[#39ff14] transition-colors text-left"
+//               >
+//                 Support
+//               </button>
+//               <div className="flex flex-col gap-3 pt-3">
+//                 <a
+//                   href="https://billing.infectedgamehosting.com/cart.php"
+//                   target="_blank"
+//                   rel="noopener"
+//                   className="neon-button-outline text-center"
+//                 >
+//                   Order Now
+//                 </a>
+//                 <a
+//                   href="https://panel.infectedgamehosting.com/"
+//                   target="_blank"
+//                   rel="noopener"
+//                   className="neon-button text-center"
+//                 >
+//                   Open Panel
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </nav>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
+
+
+name: Deploy to IONOS VPS
+
+on:
+  push:
+    branches:
+      - main # Change to 'production' or whatever branch you want to auto-deploy
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18" # Or your Node version
+          cache: "npm"
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build React App
+        run: npm run build
+        env:
+          CI: false # Prevents warnings from failing the build
+          # Add any environment variables your build needs
+          # REACT_APP_API_URL: ${{ secrets.API_URL }}
+
+      - name: 📤 Deploy to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: "dist/*" # ← Changed from build/* to dist/*
+          target: "/home/github-deploy/build"
+          strip_components: 1
+          rm: true
+
+      - name: 🚀 Execute Deployment Script
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd ~
+            ./deploy.sh
+
+      - name: ✅ Deployment Complete
+        run: |
+          echo "🎉 Deployment successful!"
+          echo "🌐 Site: https://infectedgamehosting.com"
+
+
+name: Deploy to IONOS VPS (Staging)
+
+on:
+  push:
+    branches:
+      - develop # Staging branch
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build and Deploy to Staging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Build React App (Staging)
+        run: npm run build
+        env:
+          CI: false
+          # Use staging-specific environment variables
+          VITE_PUBLIC_POSTHOG_KEY: ${{ secrets.STAGING_VITE_PUBLIC_POSTHOG_KEY }}
+          VITE_PUBLIC_POSTHOG_HOST: ${{ secrets.STAGING_VITE_PUBLIC_POSTHOG_HOST }}
+
+      - name: 📤 Deploy to VPS (Staging)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: "dist/*"
+          target: "/home/github-deploy/build-staging"
+          strip_components: 1
+          rm: true
+
+      - name: 🚀 Execute Staging Deployment Script
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd ~
+            ./deploy-staging.sh
+
+      - name: ✅ Staging Deployment Complete
+        run: |
+          echo "🎉 Staging deployment successful!"
+          echo "🌐 Staging Site: https://staging.infectedgamehosting.com"
+
+
+
+
+
+///  PALWORLD
+
+// import Footer from "@/components/Footer";
+// import Navbar from "@/components/server-nav";
+// import React, { useState } from "react";
+// import { Helmet } from "react-helmet-async";
+
+// export default function PalworldPage() {
+//   const [activeTab, setActiveTab] = useState("features");
+
+//   const plans = [
+//     {
+//       name: "Free Trial",
+//       ram: "4GB RAM",
+//       cpu: "1 vCPU",
+//       setup: "No setup fee",
+//       price: "FREE",
+//       description: "Try our service for 48 hours risk-free.",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/free-trial",
+//       players: "48-Hour Trial",
+//       isFree: true,
+//     },
+//     {
+//       name: "Starter",
+//       ram: "4GB RAM",
+//       cpu: "1 vCPU",
+//       setup: "$3.50 setup fee",
+//       price: "$11.00",
+//       description: "Perfect for 1–2 players (unmodded).",
+//       // link: "https://billing.infectedgamehosting.com/cart.php?a=add&pid=1",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/starter",
+//       players: "1-2 Players",
+//     },
+//     {
+//       name: "Standard",
+//       ram: "12GB RAM",
+//       cpu: "3 vCPU",
+//       setup: "$3.50 setup fee",
+//       price: "$33.00",
+//       description: "Great for 8–10 players (light modding).",
+//       // link: "https://billing.infectedgamehosting.com/cart.php?a=add&pid=2",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/palworld-8-gb-2-core-linux",
+//       popular: true,
+//       players: "8-10 Players",
+//     },
+//     {
+//       name: "Ultra",
+//       ram: "20GB RAM",
+//       cpu: "5 vCPU",
+//       setup: "$3.50 setup fee",
+//       price: "$55.00",
+//       description: "Best for 10+ players (moderate modding).",
+//       // link: "https://billing.infectedgamehosting.com/cart.php?a=add&pid=3",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/20gb-ram-5vcpu",
+//       players: "10+ Players",
+//     },
+//     {
+//       name: "Superior",
+//       ram: "28GB RAM",
+//       cpu: "7 vCPU",
+//       setup: "$3.50 setup fee",
+//       price: "$77.00",
+//       description: "Ultimate performance for large communities.",
+//       // link: "https://billing.infectedgamehosting.com/cart.php?a=add&pid=4",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/palworld-server-presets-superior",
+//       players: "15+ Players",
+//     },
+//     {
+//       name: "Extreme",
+//       ram: "36GB RAM",
+//       cpu: "9 vCPU",
+//       setup: "$3.50 setup fee",
+//       price: "$99.00",
+//       description: "Ideal for massive servers (heavy modpacks).",
+//       // link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-linux/extreme",
+//       link: "https://billing.infectedgamehosting.com/index.php?rp=/store/palworld-server-hosting/extreme",
+//       players: "20+ Players",
+//     },
+//   ];
+
+//   const features = [
+//     {
+//       icon: "⚡",
+//       title: "Instant Setup",
+//       description:
+//         "Your Palworld server is deployed within minutes of ordering",
+//     },
+//     {
+//       icon: "🛡️",
+//       title: "DDoS Protection",
+//       description: "Enterprise-grade protection keeps your server online 24/7",
+//     },
+//     {
+//       icon: "🔧",
+//       title: "Full Control Panel",
+//       description: "Easy-to-use interface for complete server management",
+//     },
+//     {
+//       icon: "💾",
+//       title: "Automatic Backups",
+//       description: "Daily backups ensure your world is always safe",
+//     },
+//     {
+//       icon: "🚀",
+//       title: "NVMe SSD Storage",
+//       description: "Lightning-fast storage for optimal performance",
+//     },
+//     {
+//       icon: "🌐",
+//       title: "Global Locations",
+//       description: "Choose from multiple datacenter locations worldwide",
+//     },
+//     {
+//       icon: "🔄",
+//       title: "One-Click Updates",
+//       description: "Keep your server up-to-date with automatic game updates",
+//     },
+//     {
+//       icon: "💬",
+//       title: "24/7 Support",
+//       description: "Expert support team available around the clock",
+//     },
+//   ];
+
+//   const faqs = [
+//     {
+//       q: "How many players can join my Palworld server?",
+//       a: "Player capacity depends on your plan. Our Starter plan supports 1-2 players, while our Extreme plan can handle 20+ players with mods.",
+//     },
+//     {
+//       q: "Can I install mods on my Palworld server?",
+//       a: "Yes! All our plans support mods. Higher-tier plans are optimized for running multiple mods simultaneously.",
+//     },
+//     {
+//       q: "How quickly will my server be set up?",
+//       a: "Your Palworld server will be deployed automatically within 5-10 minutes after payment confirmation.",
+//     },
+//     {
+//       q: "What if I need to upgrade my plan?",
+//       a: "You can upgrade your plan at any time through our billing panel. Upgrades are instant with no downtime.",
+//     },
+//     {
+//       q: "Can I migrate from another host?",
+//       a: "Yes, we offer free migration assistance. Contact support with your current server details.",
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <style>{`
+//         .glass-card {
+//           background: rgba(255, 255, 255, 0.05);
+//           backdrop-filter: blur(10px);
+//           border: 1px solid rgba(255, 255, 255, 0.1);
+//           border-radius: 16px;
+//           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+//         }
+
+//         .neon-button {
+//           display: inline-block;
+//           padding: 12px 24px;
+//           background: linear-gradient(135deg, #39ff14, #2ee80f);
+//           color: #000;
+//           font-weight: bold;
+//           text-decoration: none;
+//           border-radius: 8px;
+//           transition: all 0.3s ease;
+//           box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+//         }
+
+//         .neon-button:hover {
+//           box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
+//           transform: translateY(-2px);
+//         }
+
+//         .tab-button {
+//           position: relative;
+//           padding: 12px 24px;
+//           transition: all 0.3s ease;
+//         }
+
+//         .tab-button.active {
+//           color: #39ff14;
+//         }
+
+//         .tab-button.active::after {
+//           content: '';
+//           position: absolute;
+//           bottom: 0;
+//           left: 0;
+//           right: 0;
+//           height: 2px;
+//           background: linear-gradient(90deg, #39ff14, #2ee80f);
+//         }
+
+//         @keyframes fadeInUp {
+//           from {
+//             opacity: 0;
+//             transform: translateY(30px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+
+//         .fade-in-up {
+//           animation: fadeInUp 0.6s ease-out forwards;
+//         }
+
+//         .parallax-bg {
+//           background-attachment: fixed;
+//           background-size: cover;
+//           background-position: center;
+//         }
+//       `}</style>
+
+//       <div className="min-h-screen bg-[#0a0a0a] text-white">
+//         {/* METADATA */}
+//         <Helmet>
+//           <title>Palworld Game | InfectedGameHosting</title>
+//           <meta name="description" content="Palworld Game." />
+//           <meta
+//             property="og:title"
+//             content="Palworld Game | InfectedGameHosting "
+//           />
+//           <meta property="og:description" content="Palworld Game." />
+//           <meta property="og:type" content="website" />
+//           <meta
+//             property="og:url"
+//             content="https://infectedgamehosting.com/terms"
+//           />
+//           <meta property="og:image" content="/opengraph-image.png" />
+//         </Helmet>
+//         {/* Navigation */}
+//         <Navbar />
+
+//         {/* Hero Section */}
+//         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+//           <div className="absolute inset-0 opacity-20">
+//             <div className="absolute inset-0 bg-gradient-to-br from-[#39ff14]/20 via-transparent to-purple-500/20"></div>
+//           </div>
+
+//           <div className="max-w-7xl mx-auto relative z-10">
+//             <div className="grid lg:grid-cols-2 gap-12 items-center">
+//               <div className="fade-in-up">
+//                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+//                   {/* Premium{" "} */}
+//                   <span className="bg-gradient-to-r from-[#39ff14] to-[#2ee80f] bg-clip-text text-transparent">
+//                     Palworld
+//                   </span>{" "}
+//                   Hosting
+//                 </h1>
+//                 <p className="text-xl text-[#c8cbd0] mb-8 leading-relaxed">
+//                   Experience seamless Palworld gameplay with our
+//                   high-performance dedicated servers. Optimized for the perfect
+//                   balance of survival and adventure.
+//                 </p>
+//                 <div className="flex flex-wrap gap-4">
+//                   <a href="#pricing" className="neon-button text-lg px-8 py-4">
+//                     View Plans
+//                   </a>
+//                   <a
+//                     href="#features"
+//                     className="glass-card px-8 py-4 hover:border-[#39ff14]/50 transition-all"
+//                   >
+//                     Learn More
+//                   </a>
+//                 </div>
+
+//                 <div className="mt-12 grid grid-cols-3 gap-6">
+//                   <div className="text-center">
+//                     <div className="text-3xl font-bold text-[#39ff14]">
+//                       99.9%
+//                     </div>
+//                     <div className="text-sm text-[#c8cbd0] mt-1">Uptime</div>
+//                   </div>
+//                   <div className="text-center">
+//                     <div className="text-3xl font-bold text-[#39ff14]">
+//                       24/7
+//                     </div>
+//                     <div className="text-sm text-[#c8cbd0] mt-1">Support</div>
+//                   </div>
+//                   <div className="text-center">
+//                     <div className="text-3xl font-bold text-[#39ff14]">
+//                       5min
+//                     </div>
+//                     <div className="text-sm text-[#c8cbd0] mt-1">Setup</div>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               <div className="relative">
+//                 <div className="glass-card p-8 transform hover:scale-105 transition-transform duration-300">
+//                   <img
+//                     // src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80"
+//                     src="/assets/palworld.jpg"
+//                     alt="Palworld Gaming"
+//                     className="rounded-lg w-full shadow-2xl"
+//                   />
+//                   <div className="absolute -bottom-6 -right-6 glass-card p-4">
+//                     <div className="text-2xl font-bold text-[#39ff14]">
+//                       Starting at $11/mo
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Features Section */}
+//         <section
+//           id="features"
+//           className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-[#39ff14]/5 to-transparent"
+//         >
+//           <div className="max-w-7xl mx-auto">
+//             <div className="text-center mb-16">
+//               <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+//                 Why Choose{" "}
+//                 <span className="text-[#39ff14]">Our Palworld Hosting?</span>
+//               </h2>
+//               <p className="text-[#c8cbd0] text-lg max-w-2xl mx-auto">
+//                 Everything you need for the ultimate Palworld server experience
+//               </p>
+//             </div>
+
+//             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+//               {features.map((feature, index) => (
+//                 <div
+//                   key={index}
+//                   className="glass-card p-6 hover:border-[#39ff14]/50 transition-all duration-300 hover:transform hover:-translate-y-2"
+//                   style={{ animationDelay: `${index * 0.1}s` }}
+//                 >
+//                   {/* <div className="text-4xl mb-4">{feature.icon}</div> */}
+//                   <h3 className="text-xl font-bold mb-2 text-white">
+//                     {feature.title}
+//                   </h3>
+//                   <p className="text-[#c8cbd0] text-sm">
+//                     {feature.description}
+//                   </p>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Server Specifications */}
+//         <section className="py-20 px-4 sm:px-6 lg:px-8">
+//           <div className="max-w-7xl mx-auto">
+//             <div className="text-center mb-16">
+//               <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+//                 {/* <span className="text-[#39ff14]">Premium</span> */}
+//                 Server Specifications
+//               </h2>
+//               <p className="text-[#c8cbd0] text-lg">
+//                 Every plan includes enterprise-grade hardware and features
+//               </p>
+//             </div>
+
+//             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   💾
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">NVMe SSD Storage</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Ultra-fast NVMe drives for instant world loading and lag-free
+//                   gameplay
+//                 </p>
+//               </div>
+
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   🌐
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">1Gbit Network</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Unmetered bandwidth on 1Gbit connections for smooth
+//                   multiplayer
+//                 </p>
+//               </div>
+
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   🔒
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">DDoS Protection</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Advanced protection against attacks keeps your server online
+//                 </p>
+//               </div>
+
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   🖥️
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">Ryzen Processors</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Latest AMD Ryzen CPUs for maximum performance
+//                 </p>
+//               </div>
+
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   🔄
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">Auto Backups</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Daily automated backups with one-click restore
+//                 </p>
+//               </div>
+
+//               <div className="glass-card p-8 text-center group hover:border-[#39ff14]/50 transition-all">
+//                 {/* <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+//                   ⚙️
+//                 </div> */}
+//                 <h3 className="text-2xl font-bold mb-3">Full Control</h3>
+//                 <p className="text-[#c8cbd0]">
+//                   Complete FTP, file manager, and console access
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Pricing Section */}
+//         <section
+//           id="pricing"
+//           className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#39ff14]/5 via-transparent to-[#39ff14]/5"
+//         >
+//           <div className="max-w-7xl mx-auto">
+//             <div className="text-center mb-20">
+//               <h2 className="text-3xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[#39ff14] bg-clip-text text-transparent">
+//                 Choose Your Plan
+//               </h2>
+//               <p className="text-[#c8cbd0] text-lg mb-4">
+//                 All plans include NVMe/SSD storage, DDoS protection, and 1Gbit
+//                 unmetered bandwidth.
+//               </p>
+//               <p className="text-[#c8cbd0] text-sm">Current stock: Available</p>
+//             </div>
+//             {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl mx-auto">
+//               {plans.map((plan, index) => (
+//                 <div key={index} className="flex">
+//                   <div
+//                     className={`glass-card p-8 text-center group hover:scale-105 transition-transform duration-300 w-full ${
+//                       plan.popular ? "relative border-[#39ff14]/50" : ""
+//                     }`}
+//                   >
+//                     {plan.popular && (
+//                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+//                         <span className="bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black font-bold px-6 py-2 rounded-full text-sm shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+//                           Popular
+//                         </span>
+//                       </div>
+//                     )}
+//                     <h3
+//                       className={`text-2xl font-bold mb-6 text-white ${
+//                         plan.popular ? "mt-4" : ""
+//                       }`}
+//                     >
+//                       {plan.name}
+//                     </h3>
+//                     <div className="text-[#39ff14] font-semibold mb-2">
+//                       {plan.players}
+//                     </div>
+//                     <div className="text-[#c8cbd0] mb-2">
+//                       {plan.ram} / {plan.cpu}
+//                     </div>
+//                     <div className="text-[#c8cbd0] mb-6">
+//                       Setup: {plan.setup}
+//                     </div>
+//                     <div className="text-4xl font-bold text-[#39ff14] mb-6">
+//                       <span className="font-bold">{plan.price}</span>
+//                       <span className="text-lg text-[#c8cbd0]"> / month</span>
+//                     </div>
+//                     <p className="text-[#c8cbd0] mb-8 leading-relaxed">
+//                       {plan.description}
+//                     </p>
+//                     <a
+//                       href={plan.link}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="neon-button w-full block text-center"
+//                     >
+//                       Order Now
+//                     </a>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div> */}
+//             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+//               {plans.map((plan, index) => (
+//                 <div key={index} className="flex">
+//                   <div
+//                     className={`glass-card p-8 text-center group hover:scale-105 transition-transform duration-300 w-full flex flex-col ${
+//                       plan.popular ? "relative border-[#39ff14]/50" : ""
+//                     }`}
+//                   >
+//                     {plan.popular && (
+//                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+//                         <span className="bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black font-bold px-6 py-2 rounded-full text-sm shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+//                           Popular
+//                         </span>
+//                       </div>
+//                     )}
+
+//                     <div className="flex flex-col flex-grow">
+//                       <h3
+//                         className={`text-2xl font-bold mb-6 text-white ${
+//                           plan.popular ? "mt-4" : ""
+//                         }`}
+//                       >
+//                         {plan.name}
+//                       </h3>
+//                       <div className="text-[#c8cbd0] mb-2">
+//                         {plan.ram} / {plan.cpu}
+//                       </div>
+//                       <div className="text-[#c8cbd0] mb-6">
+//                         Setup: {plan.setup}
+//                       </div>
+//                       <div className="text-4xl font-bold text-[#39ff14] mb-6">
+//                         <span className="font-bold">{plan.price}</span>
+//                         <span className="text-lg text-[#c8cbd0]"> / month</span>
+//                       </div>
+//                       <p className="text-[#c8cbd0] mb-8 leading-relaxed flex-grow">
+//                         {plan.description}
+//                       </p>
+//                     </div>
+
+//                     <a
+//                       href={plan.link}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="neon-button w-full"
+//                     >
+//                       Order
+//                     </a>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>{" "}
+//           </div>
+//         </section>
+
+//         {/* FAQ Section */}
+//         <section className="py-20 px-4 sm:px-6 lg:px-8">
+//           <div className="max-w-4xl mx-auto">
+//             <div className="text-center mb-16">
+//               <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+//                 Frequently Asked{" "}
+//                 <span className="text-[#39ff14]">Questions</span>
+//               </h2>
+//               <p className="text-[#c8cbd0] text-lg">
+//                 Everything you need to know about our Palworld hosting
+//               </p>
+//             </div>
+
+//             <div className="space-y-4">
+//               {faqs.map((faq, index) => (
+//                 <div
+//                   key={index}
+//                   className="glass-card p-6 hover:border-[#39ff14]/50 transition-all"
+//                 >
+//                   <h3 className="text-xl font-bold mb-3 text-white">{faq.q}</h3>
+//                   <p className="text-[#c8cbd0] leading-relaxed">{faq.a}</p>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* CTA Section */}
+//         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#39ff14]/10 to-purple-500/10">
+//           <div className="max-w-4xl mx-auto text-center">
+//             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+//               Ready to Start Your{" "}
+//               <span className="text-[#39ff14]">Palworld Adventure?</span>
+//             </h2>
+//             <p className="text-[#c8cbd0] text-lg mb-8 max-w-2xl mx-auto">
+//               Join thousands of players already hosting their Palworld servers
+//               with us. Get started in just 5 minutes!
+//             </p>
+//             <div className="flex flex-wrap justify-center gap-4">
+//               <a href="#pricing" className="neon-button text-lg px-8 py-4">
+//                 Choose Your Plan
+//               </a>
+//               <a
+//                 href="https://billing.infectedgamehosting.com/"
+//                 className="glass-card px-8 py-4 hover:border-[#39ff14]/50 transition-all"
+//               >
+//                 Contact Support
+//               </a>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Footer */}
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// }
+
+
+
+// import { useState, useEffect, useRef } from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import {
+//   Navigation,
+//   Pagination,
+//   Autoplay,
+//   EffectFade,
+//   Parallax,
+// } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/effect-fade";
+// import { ChevronLeft, ChevronRight, Check } from "lucide-react";
+
+// const GameCarousel = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const swiperRef = useRef(null);
+
+//   const games = [
+//     {
+//       name: "Rust",
+//       tagline:
+//         "Try to survive, build huge bases, and join forces with fellow players",
+//       description: "Unlimited Slots, Storage, and Bandwidth",
+//       price: "$9.99",
+//       image:
+//         "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2065",
+//       buttonText: "Start Now",
+//       color: "#ce422b",
+//     },
+//     {
+//       name: "Palworld",
+//       tagline: "Collect cute monster called 'Pals' to fight by your side",
+//       description: "Unlimited Slots, Storage, and Bandwidth",
+//       price: "$9.99",
+//       image:
+//         "https://res.cloudinary.com/dpnsseamh/image/upload/v1760098806/wp13312678-palworld-wallpapers_p5sli4.jpg",
+//       buttonText: "Start Now",
+//       color: "#4a9eff",
+//     },
+//     {
+//       name: "Minecraft",
+//       tagline: "Ultimate Mod Support & Cross-Platform Gaming",
+//       description: "Unlimited Slots, Storage, and Bandwidth",
+//       price: "$11.00",
+//       image:
+//         "https://res.cloudinary.com/dpnsseamh/image/upload/v1760098809/wp13114937-minecraft-ps4-wallpapers_n13im2.jpg",
+//       buttonText: "Start Now",
+//       color: "#62b947",
+//     },
+//     {
+//       name: "DayZ",
+//       tagline: "Survive the Apocalypse in a harsh post-soviet landscape",
+//       description: "Unlimited Slots, Storage, and Bandwidth",
+//       price: "$14.99",
+//       image:
+//         "https://res.cloudinary.com/dpnsseamh/image/upload/v1760098810/wp1886389-dayz-wallpapers_wxpw6v.jpg",
+//       buttonText: "Start Now",
+//       color: "#d32f2f",
+//     },
+//     {
+//       name: "V Rising",
+//       tagline: "Awaken Your Inner Vampire and build your castle empire",
+//       description: "Unlimited Slots, Storage, and Bandwidth",
+//       price: "$12.99",
+//       image:
+//         "https://res.cloudinary.com/dpnsseamh/image/upload/v1760720011/wp11205562-v-rising-wallpapers_zheviw.png",
+//       buttonText: "Start Now",
+//       color: "#8b1538",
+//     },
+//   ];
+
+//   const handleSlideChange = (swiper) => {
+//     setActiveIndex(swiper.realIndex);
+//   };
+
+//   const goToSlide = (index) => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideToLoop(index);
+//     }
+//   };
+
+//   return (
+//     <section className="relative w-full h-screen bg-[#0b0b0f] overflow-hidden">
+//       <style>{`
+//         .game-carousel-swiper {
+//           width: 100%;
+//           height: 100%;
+//         }
+
+//         .game-carousel-swiper .swiper-slide {
+//           opacity: 0 !important;
+//           transition: opacity 0.8s ease-in-out;
+//         }
+
+//         .game-carousel-swiper .swiper-slide-active {
+//           opacity: 1 !important;
+//         }
+
+//         .game-tab {
+//           position: relative;
+//           overflow: hidden;
+//         }
+
+//         .game-tab::before {
+//           content: '';
+//           position: absolute;
+//           inset: 0;
+//           background: linear-gradient(90deg, transparent, rgba(57, 255, 20, 0.1), transparent);
+//           transform: translateX(-100%);
+//           transition: transform 0.6s ease;
+//         }
+
+//         .game-tab:hover::before {
+//           transform: translateX(100%);
+//         }
+
+//         .game-tab.active {
+//           animation: pulse-glow 2s ease-in-out infinite;
+//         }
+
+//         @keyframes pulse-glow {
+//           0%, 100% {
+//             box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+//           }
+//           50% {
+//             box-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
+//           }
+//         }
+
+//         @keyframes float {
+//           0%, 100% { transform: translateY(0px); }
+//           50% { transform: translateY(-20px); }
+//         }
+
+//         .floating-element {
+//           animation: float 6s ease-in-out infinite;
+//         }
+
+//         .content-reveal {
+//           animation: slideUpFade 0.8s ease-out forwards;
+//         }
+
+//         @keyframes slideUpFade {
+//           from {
+//             opacity: 0;
+//             transform: translateY(30px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+
+//         .swiper-button-next,
+//         .swiper-button-prev {
+//           display: none !important;
+//         }
+//       `}</style>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Pagination, Autoplay, EffectFade, Parallax]}
+//         effect="fade"
+//         speed={1200}
+//         autoplay={{
+//           delay: 5000,
+//           disableOnInteraction: false,
+//           pauseOnMouseEnter: true,
+//         }}
+//         loop={true}
+//         parallax={true}
+//         onSlideChange={handleSlideChange}
+//         className="game-carousel-swiper"
+//       >
+//         {games.map((game, index) => (
+//           <SwiperSlide key={game.name}>
+//             <div className="relative w-full h-full">
+//               {/* Background Image with Parallax */}
+//               <div className="absolute inset-0" data-swiper-parallax="-23%">
+//                 <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0f] via-[#0b0b0f]/95 to-transparent z-10" />
+//                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0b0f] via-transparent to-transparent z-10" />
+//                 <img
+//                   src={game.image}
+//                   alt={game.name}
+//                   className="w-full h-full object-cover scale-110"
+//                 />
+//               </div>
+
+//               {/* Animated Grid Overlay */}
+//               <div
+//                 className="absolute inset-0 opacity-10 z-10"
+//                 style={{
+//                   backgroundImage:
+//                     "linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(57, 255, 20, 0.1) 1px, transparent 1px)",
+//                   backgroundSize: "50px 50px",
+//                 }}
+//               />
+
+//               {/* Content */}
+//               <div className="relative z-20 h-full flex flex-col justify-between px-4 sm:px-6 lg:px-16 py-12">
+//                 <div className="flex-1 flex items-center">
+//                   <div
+//                     className="w-full max-w-7xl mx-auto"
+//                     data-swiper-parallax="-100"
+//                   >
+//                     <div className="max-w-3xl">
+//                       {/* Badge */}
+//                       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#39ff14]/20 to-[#39ff14]/10 border border-[#39ff14]/30 mb-8 backdrop-blur-sm content-reveal">
+//                         <Check className="w-4 h-4 text-[#39ff14]" />
+//                         <span className="text-sm text-white font-medium">
+//                           {game.description}
+//                         </span>
+//                       </div>
+
+//                       {/* Game Name */}
+//                       <h1
+//                         className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white mb-4 content-reveal"
+//                         style={{ animationDelay: "0.1s" }}
+//                       >
+//                         {game.name}
+//                       </h1>
+
+//                       {/* Server Hosting */}
+//                       <h2
+//                         className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-[#c8cbd0] to-[#39ff14] bg-clip-text text-transparent content-reveal"
+//                         style={{ animationDelay: "0.2s" }}
+//                       >
+//                         Server Hosting
+//                       </h2>
+
+//                       {/* Price Section */}
+//                       <div
+//                         className="flex flex-col sm:flex-row sm:items-center gap-6 mb-10 content-reveal"
+//                         style={{ animationDelay: "0.3s" }}
+//                       >
+//                         <div className="relative">
+//                           <p className="text-sm text-[#c8cbd0] mb-2">
+//                             Starts at
+//                           </p>
+//                           <p className="text-6xl font-bold text-white">
+//                             {game.price}
+//                           </p>
+//                           <div className="absolute -inset-4 bg-gradient-to-r from-[#39ff14]/10 to-transparent rounded-lg -z-10" />
+//                         </div>
+//                         <div className="sm:border-l border-white/20 sm:pl-6 sm:py-4 max-w-md">
+//                           <p className="text-[#c8cbd0] text-lg leading-relaxed">
+//                             {game.tagline}
+//                           </p>
+//                         </div>
+//                       </div>
+
+//                       {/* CTA Button */}
+//                       <button
+//                         className="group px-10 py-5 bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black font-bold text-lg rounded-lg hover:shadow-[0_0_40px_rgba(57,255,20,0.5)] transition-all duration-300 relative overflow-hidden content-reveal"
+//                         style={{ animationDelay: "0.4s" }}
+//                       >
+//                         <span className="relative z-10">{game.buttonText}</span>
+//                         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 </div>
+
+//                 {/* Navigation Tabs - Desktop */}
+//                 <div className="hidden md:block w-full">
+//                   <div className="max-w-7xl mx-auto">
+//                     <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md rounded-2xl p-3 border border-white/10">
+//                       {games.map((g, idx) => (
+//                         <button
+//                           key={g.name}
+//                           onClick={() => goToSlide(idx)}
+//                           className={`game-tab flex-1 px-6 py-4 text-center font-semibold rounded-xl transition-all duration-500 ${
+//                             idx === activeIndex
+//                               ? "active bg-gradient-to-r from-[#7c3aed] to-[#a855f7] text-white scale-105"
+//                               : "text-[#c8cbd0] hover:text-white hover:bg-white/5"
+//                           }`}
+//                         >
+//                           <span className="block text-sm sm:text-base">
+//                             {g.name}
+//                           </span>
+//                           {idx === activeIndex && (
+//                             <span className="block text-xs text-[#39ff14] mt-1">
+//                               {g.price}
+//                             </span>
+//                           )}
+//                         </button>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 </div>
+
+//                 {/* Navigation Tabs - Mobile */}
+//                 <div className="md:hidden w-full">
+//                   <div className="bg-black/50 backdrop-blur-md rounded-2xl p-4 border border-white/10">
+//                     <div className="flex items-center justify-between mb-4">
+//                       <button
+//                         onClick={() =>
+//                           goToSlide(
+//                             activeIndex === 0
+//                               ? games.length - 1
+//                               : activeIndex - 1
+//                           )
+//                         }
+//                         className="p-3 text-[#39ff14] hover:bg-white/10 rounded-lg transition-colors"
+//                       >
+//                         <ChevronLeft className="w-6 h-6" />
+//                       </button>
+
+//                       <div className="flex-1 px-4">
+//                         <div className="bg-gradient-to-r from-[#7c3aed] to-[#a855f7] text-white font-bold text-center py-3 px-6 rounded-xl shadow-lg">
+//                           <div className="text-lg">
+//                             {games[activeIndex].name}
+//                           </div>
+//                           <div className="text-sm text-[#39ff14] mt-1">
+//                             {games[activeIndex].price}
+//                           </div>
+//                         </div>
+//                       </div>
+
+//                       <button
+//                         onClick={() =>
+//                           goToSlide(
+//                             activeIndex === games.length - 1
+//                               ? 0
+//                               : activeIndex + 1
+//                           )
+//                         }
+//                         className="p-3 text-[#39ff14] hover:bg-white/10 rounded-lg transition-colors"
+//                       >
+//                         <ChevronRight className="w-6 h-6" />
+//                       </button>
+//                     </div>
+
+//                     {/* Progress Dots */}
+//                     <div className="flex justify-center gap-2">
+//                       {games.map((_, idx) => (
+//                         <button
+//                           key={idx}
+//                           onClick={() => goToSlide(idx)}
+//                           className={`h-1.5 rounded-full transition-all duration-500 ${
+//                             idx === activeIndex
+//                               ? "bg-[#39ff14] w-12"
+//                               : "bg-white/30 w-6 hover:bg-white/50"
+//                           }`}
+//                         />
+//                       ))}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* Floating Elements */}
+//               <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#39ff14] rounded-full opacity-60 floating-element z-10" />
+//               <div
+//                 className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#39ff14] rounded-full opacity-50 floating-element z-10"
+//                 style={{ animationDelay: "1s" }}
+//               />
+//               <div
+//                 className="absolute bottom-1/3 right-1/4 w-4 h-4 bg-[#39ff14] rounded-full opacity-40 floating-element z-10"
+//                 style={{ animationDelay: "2s" }}
+//               />
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </section>
+//   );
+// };
+
+// export default GameCarousel;
+
+
+
+// import React, { useMemo, useState } from "react";
+
+// interface Plan {
+//   name: string;
+//   ram?: string;
+//   cpu?: string;
+//   setup?: string;
+//   priceMonthly: number; // numeric monthly base price (used for discount math)
+//   description?: string;
+//   link?: string;
+//   players?: string;
+//   popular?: boolean;
+//   isFree?: boolean;
+//   features?: string[]; // optional feature list
+// }
+
+// interface PricingSectionProps {
+//   plans: Plan[];
+//   title?: string;
+//   subtitle?: string;
+//   stockText?: string;
+// }
+
+// const DISCOUNTS: Record<string, number> = {
+//   "1": 0, // 1 month (monthly) => 0%
+//   "3": 0.05, // quarterly => 5%
+//   "6": 0.1, // semi-annual => 10%
+//   "12": 0.15, // annual => 15%
+// };
+
+// const billingOptions = [
+//   { key: "1", label: "Monthly", tag: "" },
+//   { key: "3", label: "3 Months", tag: "5% Off" },
+//   { key: "6", label: "6 Months", tag: "10% Off" },
+//   { key: "12", label: "12 Months", tag: "15% Off" },
+// ];
+
+// export default function PricingSection({
+//   plans,
+//   title,
+//   subtitle,
+//   stockText,
+// }: PricingSectionProps) {
+//   const [billing, setBilling] = useState<string>("1"); // default Monthly
+
+//   const formatCurrency = (n: number) =>
+//     new Intl.NumberFormat(undefined, {
+//       style: "currency",
+//       currency: "USD",
+//       maximumFractionDigits: 2,
+//     }).format(n);
+
+//   return (
+//     <section
+//       id="pricing"
+//       className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#39ff14]/4 via-transparent to-[#39ff14]/4"
+//     >
+//       <style>{`
+//         .glass-card {
+//           background: rgba(255, 255, 255, 0.03);
+//           backdrop-filter: blur(10px);
+//           border: 1px solid rgba(255, 255, 255, 0.06);
+//           border-radius: 16px;
+//           box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+//         }
+//         .neon-button {
+//           display:inline-block;
+//           padding:12px 24px;
+//           background:linear-gradient(90deg,#39ff14,#2ee80f);
+//           color:#000;
+//           font-weight:700;
+//           border-radius:999px;
+//           box-shadow:0 6px 30px rgba(57,255,20,0.18);
+//           transition: transform .18s ease, box-shadow .18s ease;
+//         }
+//         .neon-button:hover { transform: translateY(-3px); box-shadow:0 10px 40px rgba(57,255,20,0.28); }
+//         .glow-border {
+//           border: 1px solid rgba(57,255,20,0.12);
+//         }
+//       `}</style>
+
+//       <div className="max-w-7xl mx-auto">
+//         <div className="flex items-start justify-between mb-10 gap-6 flex-col md:flex-row">
+//           <div className="text-left">
+//             <h2 className="text-3xl sm:text-5xl font-extrabold mb-3 bg-gradient-to-r from-white to-[#39ff14] bg-clip-text text-transparent">
+//               {title || "Powerful Plans and Unbeatable Prices"}
+//             </h2>
+//             <p className="text-[#c8cbd0] text-lg max-w-2xl">
+//               {subtitle ||
+//                 "All plans include NVMe/SSD storage, DDoS protection, and 1Gbit unmetered bandwidth."}
+//             </p>
+//             <p className="text-[#c8cbd0] text-sm mt-2">
+//               {stockText || "Current stock: Available"}
+//             </p>
+//           </div>
+
+//           {/* Billing toggle (top-right like reference) */}
+//           <div className="flex flex-col items-end">
+//             <div className="inline-flex items-center gap-3 bg-[#0b0b0b] p-2 rounded-full border border-[#ffffff10]">
+//               {billingOptions.map((opt) => {
+//                 const selected = billing === opt.key;
+//                 return (
+//                   <button
+//                     key={opt.key}
+//                     onClick={() => setBilling(opt.key)}
+//                     className={`relative px-4 py-2 text-sm rounded-full font-semibold transition ${
+//                       selected
+//                         ? "bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black shadow-[0_6px_30px_rgba(57,255,20,0.14)]"
+//                         : "text-[#c8cbd0] hover:bg-white/3"
+//                     }`}
+//                     aria-pressed={selected}
+//                   >
+//                     <span className="block">{opt.label}</span>
+//                     {opt.tag && (
+//                       <small
+//                         className={`block mt-1 text-[10px] ${
+//                           selected ? "text-black font-bold" : "text-[#c8cbd0]"
+//                         }`}
+//                       >
+//                         {opt.tag}
+//                       </small>
+//                     )}
+//                   </button>
+//                 );
+//               })}
+//             </div>
+
+//             {/* small discount bar to mimic the little percentage markers in screenshot */}
+//             <div className="mt-3 text-xs text-[#9aa0a6]">
+//               <span className="mr-4">Monthly</span>
+//               <span className="mr-4">3 mo — 5% off</span>
+//               <span className="mr-4">6 mo — 10% off</span>
+//               <span>12 mo — 15% off</span>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Cards grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {plans.map((plan, i) => {
+//             const discount = DISCOUNTS[billing] ?? 0;
+//             const base = plan.priceMonthly;
+//             const discounted = +(base * (1 - discount)).toFixed(2);
+
+//             // show "Billed every X months" label
+//             const billingPeriodText =
+//               billing === "1"
+//                 ? "/ month"
+//                 : ` / month (billed every ${billing} mo)`;
+//             const showStrike = discount > 0 && discounted < base;
+
+//             return (
+//               <div key={i} className="flex">
+//                 <div
+//                   className={`glass-card w-full p-6 flex flex-col justify-between relative transition-transform duration-300 hover:scale-[1.02] ${
+//                     plan.popular
+//                       ? "border-2 border-[#39ff14]/40 shadow-[0_10px_40px_rgba(57,255,20,0.06)]"
+//                       : "glow-border"
+//                   }`}
+//                 >
+//                   {/* Popular badge */}
+//                   {plan.popular && (
+//                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+//                       <span className="bg-gradient-to-r from-[#39ff14] to-[#2ee80f] text-black font-bold px-5 py-2 rounded-full text-sm shadow-[0_6px_24px_rgba(57,255,20,0.12)]">
+//                         Most Popular
+//                       </span>
+//                     </div>
+//                   )}
+
+//                   {/* Header */}
+//                   <div className="text-center pt-6">
+//                     <h3 className="text-xl font-bold text-white mb-2">
+//                       {plan.name}
+//                     </h3>
+//                     {plan.players && (
+//                       <div className="text-[#39ff14] font-semibold mb-2">
+//                         {plan.players}
+//                       </div>
+//                     )}
+//                     <div className="text-[#c8cbd0] text-sm mb-3">
+//                       {plan.ram} {plan.cpu ? `• ${plan.cpu}` : ""}
+//                     </div>
+
+//                     {/* Price */}
+//                     <div className="mb-4">
+//                       <div className="flex items-baseline justify-center gap-3">
+//                         <div className="text-4xl font-extrabold text-[#39ff14]">
+//                           {formatCurrency(discounted)}
+//                         </div>
+
+//                         <div className="text-sm text-[#c8cbd0]">
+//                           {billingPeriodText}
+//                         </div>
+//                       </div>
+
+//                       {showStrike && (
+//                         <div className="text-xs text-[#9aa0a6] mt-2">
+//                           <span className="line-through mr-2">
+//                             {formatCurrency(base)}
+//                           </span>
+//                           <span>Save {Math.round(discount * 100)}%</span>
+//                         </div>
+//                       )}
+//                     </div>
+
+//                     {/* Short description */}
+//                     <p className="text-[#c8cbd0] text-sm leading-relaxed mb-6 px-2">
+//                       {plan.description}
+//                     </p>
+//                   </div>
+
+//                   {/* Feature list */}
+//                   {plan.features && plan.features.length > 0 && (
+//                     <ul className="text-left text-sm text-[#c8cbd0] space-y-2 mb-6 px-2">
+//                       {plan.features.map((f, idx) => (
+//                         <li key={idx} className="flex items-start gap-3">
+//                           <span className="inline-block mt-[2px]">✓</span>
+//                           <span>{f}</span>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                   )}
+
+//                   {/* CTA */}
+//                   <div className="mt-3">
+//                     <a
+//                       href={plan.link || "#"}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="neon-button w-full text-center block"
+//                     >
+//                       Start Now
+//                     </a>
+//                   </div>
+
+//                   {/* footer small */}
+//                   <div className="hidden mt-4 text-center text-xs text-[#8f9398]">
+//                     <span>90 Day Refund Policy</span>
+//                   </div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
