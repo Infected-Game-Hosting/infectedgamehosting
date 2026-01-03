@@ -7,12 +7,12 @@ import FeaturesSection from "@/components/game-details/feature";
 import HeroSection from "@/components/game-details/hero-section";
 import ServerSpecifications from "@/components/game-details/specifications";
 import MinecraftEditionsSection from "@/components/MinecraftEditingSection";
+import SEO from "@/components/seo/SEO";
 import Navbar from "@/components/server-nav";
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { getPageMetadata } from "@/config/metadata";
 
 export default function MinecraftPage() {
-  const [activeTab, setActiveTab] = useState("features");
+  const metadata = getPageMetadata("minecraft");
 
   const features = [
     {
@@ -148,27 +148,15 @@ export default function MinecraftPage() {
       `}</SafeStyle>
 
       <div className="min-h-screen bg-[#0a0a0a] text-white">
-        <Helmet>
-          <title>Minecraft Hosting | InfectedGameHosting</title>
-          <meta
-            name="description"
-            content=" Minecraft  server hosting with cross-platform support for mobile, console, and PC."
-          />
-          <meta
-            property="og:title"
-            content="Minecraft  Hosting | InfectedGameHosting"
-          />
-          <meta
-            property="og:description"
-            content=" Minecraft  server hosting with cross-platform support for mobile, console, and PC."
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:url"
-            content="https://infectedgamehosting.com/game/minecraft-server-hosting"
-          />
-          <meta property="og:image" content="/opengraph-image.png" />
-        </Helmet>
+        {/*  meta tags */}
+        <SEO
+          title={metadata.title}
+          description={metadata.description}
+          keywords={metadata.keywords}
+          image={metadata.image}
+          canonical={metadata.canonical}
+          type={metadata.type}
+        />
 
         <Navbar />
 

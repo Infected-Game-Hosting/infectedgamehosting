@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useBlogPosts } from "@/hooks/useContentful";
 import { formatDistanceToNow } from "date-fns";
 import Navbar from "@/components/navbar/blog-header";
+import { getPageMetadata } from "@/config/metadata";
+import SEO from "@/components/seo/SEO";
 
 export const Blog = () => {
   const { data: blogPosts, loading } = useBlogPosts();
+  const metadata = getPageMetadata("blog");
 
   if (loading) {
     return (
@@ -51,21 +53,15 @@ export const Blog = () => {
 
   return (
     <div className="min-h-screen bg-[#0b0b0f]">
-      <Helmet>
-        <title>Blog | Make Maker</title>
-        <meta
-          name="description"
-          content="Stay updated with the latest insights, trends, and innovations in game hosting."
-        />
-        <meta property="og:title" content="Blog | Make Maker" />
-        <meta
-          property="og:description"
-          content="Stay updated with the latest insights, trends, and innovations in game hosting."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.makemaker.com/blog" />
-        <meta property="og:image" content="/opengraph-image.png" />
-      </Helmet>
+      {/*  meta tags */}
+      <SEO
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+        image={metadata.image}
+        canonical={metadata.canonical}
+        type={metadata.type}
+      />
 
       <Navbar />
       <main className="pt-20">
