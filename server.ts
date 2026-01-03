@@ -30,7 +30,6 @@ if (!isProduction) {
   app.use(
     base,
     sirv(path.resolve(__dirname, "client"), {
-      // Changed from "dist/client"
       extensions: [],
       setHeaders: (res, pathname) => {
         if (pathname.includes("/assets/")) {
@@ -87,10 +86,11 @@ app.get(/.*/, async (req, res) => {
       render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
     } else {
       template = fs.readFileSync(
-        path.resolve(__dirname, "client/index.html"), // Changed from "dist/client"
+        path.resolve(__dirname, "client/index.html"),
         "utf-8"
       );
-      render = (await import("./dist/server/entry-server.js")).render; // Changed from "dist/server"
+      // @ts-ignore - This path exists after build
+      render = (await import("./server/entry-server.js")).render;
     }
 
     const { html: appHtml, helmet } = await render(cleanUrl);
