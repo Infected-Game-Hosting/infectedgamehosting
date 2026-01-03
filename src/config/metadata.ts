@@ -44,7 +44,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       "Premium Minecraft server hosting with cross-platform support for Java & Bedrock. NVMe SSD storage, DDoS protection, mod support, and instant setup. Starting at $11/month.",
     keywords:
       "Minecraft hosting, Minecraft server hosting, Minecraft Bedrock, Minecraft Java, cross-platform Minecraft, modded Minecraft server, Minecraft plugins, game server hosting",
-    image: `${BASE_URL}/assets/games/minecraft-og.png`,
+    image: `${BASE_URL}/assets/games/minecraft.jpg`,
     canonical: `${BASE_URL}/game/minecraft-server-hosting`,
   },
 
@@ -103,7 +103,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       "Stay updated with the latest game server hosting news, tutorials, optimization guides, and community updates from Infected Game Hosting.",
     keywords:
       "game hosting blog, server tutorials, gaming news, hosting guides, server optimization, game updates",
-    image: `${BASE_URL}/assets/blog-og.png`,
+    image: `${BASE_URL}/assets/minecraft.jpg`,
     canonical: `${BASE_URL}/blog`,
   },
 
